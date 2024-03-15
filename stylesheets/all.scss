@@ -1,0 +1,44 @@
+@import '../node_modules/bootstrap/scss/bootstrap-reboot';
+@import '../node_modules/bootstrap/scss/bootstrap-grid';
+
+//導覽列
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(white, 0.3);
+    backdrop-filter: blur(3px);
+    z-index: 1000;
+
+    .navbar-list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .list-item {
+        padding: 1rem;
+        display: block;
+        text-decoration: none;
+        color: black ;
+        &:hover, &.active { 
+            color: orange;
+        }
+    }
+
+}
+
+//Utilities.scss
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+.align-items-center{
+    align-items: center;
+}
