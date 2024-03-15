@@ -4670,6 +4670,10 @@ progress {
     display: none !important;
   }
 }
+.brand {
+  font-size: 24px;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -4701,4 +4705,16 @@ progress {
 
 .justify-content-between {
   justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
 }
