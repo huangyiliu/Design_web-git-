@@ -1,6 +1,33 @@
 @import '../node_modules/bootstrap/scss/bootstrap-reboot';
 @import '../node_modules/bootstrap/scss/bootstrap-grid';
 
+$dark:#000;
+$primary:#FF7A00;
+$primary-light:#FF9900;;
+$secondary:#3586FF;
+$secondary-light:#0065FC;
+
+.open-sans-extrabold{
+    font-family:"Open Sans", sans-serif;
+    font-weight: 800;
+}
+
+.open-sans-light{
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 300;
+}
+
+.open-sans-black{
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 900;
+}
+
+body{
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
 //導覽列
 .brand{
     font-size: 24px;
@@ -33,7 +60,38 @@
 
 }
 
+.section{
+padding-top: 60px;
+padding-bottom: 60px;
+background-color:#eee ;
+
+}
+//button
+.btn-primary{
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    width: 50%;
+    background-image:linear-gradient(to bottom,$primary-light,$primary);
+    color: white;
+    transition: box-shadow 0.15s;
+    &:hover, &.active { 
+        background-image:linear-gradient(to bottom,
+        $primary-light,$primary);
+        box-shadow: $primary-light 5px 5px 15px;
+        // background-image:linear-gradient(to bottom,
+        // darken($primary-light,5%),
+        // darken($primary,5%));
+    }
+}
+
+
 //Utilities.scss
+.dispaly-h1{
+    font-size: 68px;
+    line-height: 1.2;
+}
 .d-flex {
     display: flex;
 }
@@ -49,4 +107,22 @@
 }
 .p-absolute{
     position: absolute;
+}
+.z-index--1{
+    z-index:-1;
+}
+
+.type-blink{
+    width: 3px;
+    height: 68px;
+    background-image: linear-gradient(to bottom, #3586ff, rgba(0, 101, 252, 0.5));
+    position: absolute;
+    top: 43%;
+    transform: translateY(-50%);
+    animation: blink 1s infinite;
+  }
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
 }

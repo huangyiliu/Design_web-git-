@@ -4670,6 +4670,27 @@ progress {
     display: none !important;
   }
 }
+.open-sans-extrabold {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+}
+
+.open-sans-light {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 300;
+}
+
+.open-sans-black {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 900;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 .brand {
   font-size: 24px;
 }
@@ -4699,6 +4720,32 @@ progress {
   color: orange;
 }
 
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #eee;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 100px;
+  width: 50%;
+  background-image: linear-gradient(to bottom, #FF9900, #FF7A00);
+  color: white;
+  transition: box-shadow 0.15s;
+}
+.btn-primary:hover, .btn-primary.active {
+  background-image: linear-gradient(to bottom, #FF9900, #FF7A00);
+  box-shadow: #FF9900 5px 5px 15px;
+}
+
+.dispaly-h1 {
+  font-size: 68px;
+  line-height: 1.2;
+}
+
 .d-flex {
   display: flex;
 }
@@ -4717,4 +4764,24 @@ progress {
 
 .p-absolute {
   position: absolute;
+}
+
+.z-index--1 {
+  z-index: -1;
+}
+
+.type-blink {
+  width: 3px;
+  height: 68px;
+  background-image: linear-gradient(to bottom, #3586ff, rgba(0, 101, 252, 0.5));
+  position: absolute;
+  top: 43%;
+  transform: translateY(-50%);
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
