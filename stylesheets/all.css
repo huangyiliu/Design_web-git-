@@ -4680,11 +4680,6 @@ progress {
   font-weight: 300;
 }
 
-.open-sans-black {
-  font-family: "Noto Sans TC", sans-serif;
-  font-weight: 900;
-}
-
 body {
   font-family: "Noto Sans TC", sans-serif;
   font-size: 16px;
@@ -4693,6 +4688,7 @@ body {
 
 .brand {
   font-size: 24px;
+  margin-left: 100px;
 }
 
 .navbar {
@@ -4770,18 +4766,45 @@ body {
   z-index: -1;
 }
 
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.open-sans-black {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 900;
+}
+
 .type-blink {
   width: 3px;
   height: 68px;
   background-image: linear-gradient(to bottom, #3586ff, rgba(0, 101, 252, 0.5));
   position: absolute;
-  top: 43%;
+  top: 46%;
   transform: translateY(-50%);
   animation: blink 1s infinite;
 }
 
-@keyframes blink {
-  50% {
-    opacity: 0;
+@media (max-width: 768px) {
+  .open-sans-black {
+    font-size: 55px;
+  }
+  .type-blink {
+    top: 13%;
+  }
+}
+@media (max-width: 1024px) {
+  .open-sans-black {
+    font-size: 35px;
+  }
+  .dispaly-h1 {
+    padding-top: 20px;
+    font-size: 48px;
+    line-height: 0.9;
+  }
+  .type-blink {
+    height: 35px;
+    top: 44%;
   }
 }
